@@ -9,7 +9,7 @@
     <meta property="og:description" content="From one friend to another. No hype, just what I've learned.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #FAF9F6;
@@ -34,7 +34,7 @@
             --radius: 12px;
             --radius-sm: 8px;
             --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-sans: 'Lora', Georgia, 'Times New Roman', serif;
             --max-width: 780px;
             --nav-height: 64px;
         }
@@ -974,21 +974,9 @@
         <h1>How I'm Actually Using AI</h1>
         <p class="subtitle">I told you I'd send this. Here's what I've figured out so far.</p>
         <p class="hero-intro">
-            I've been using Claude every day for months. Some of it works really well, some of it doesn't. This is the whole picture, not a sales pitch.
+            I've been using Claude every day for about a month. Some of it works really well, some of it doesn't. This is the whole picture, not a sales pitch.
         </p>
-        <p class="reading-time">About 10 minutes to read through everything</p>
-
-        <div class="tldr">
-            <span class="tldr-label">The short version</span>
-            <ul>
-                <li>Start with Claude Desktop's "Co-Work" mode. It reads your files and helps you work with them.</li>
-                <li>There are three parts to getting value: knowing what you want, giving it the right information, and tinkering until the workflow is right.</li>
-                <li>It's great at structured work (cleaning up spreadsheets, drafting emails). It's not great at analysis, charts, or anything subjective.</li>
-                <li>The most useful thing you can do is get the knowledge in your head into a document. Brain dump while you drive.</li>
-                <li>This is not a one-time setup. I've been at it for months and I'm still building.</li>
-                <li>I'm more on top of my stuff than I've ever been, but I'm also working more than ever. It's a trade-off.</li>
-            </ul>
-        </div>
+        <p class="reading-time">About 10 minutes</p>
     </section>
 
     <!-- ════════ THE BASICS ════════ -->
@@ -1001,18 +989,18 @@
             <div class="card">
                 <div class="card-icon" style="background: #F0E6F5;">&#128172;</div>
                 <h3>Chat</h3>
-                <p>Basic conversation. Ask a question, get an answer. Good for quick stuff, but limited for real work with your own files.</p>
+                <p>Ask a question, get an answer. Good for quick stuff, but limited.</p>
             </div>
             <div class="card card-recommended">
                 <span class="badge">Start here</span>
                 <div class="card-icon" style="background: var(--accent-light);">&#128194;</div>
                 <h3>Co-Work</h3>
-                <p>Opens a folder on your computer and works with your actual files. Spreadsheets, Word docs, PDFs, whatever. You could drop in a bunch of well completion reports and have it build a summary, for example.</p>
+                <p>Works inside a folder on your computer. Spreadsheets, Word docs, PDFs, whatever. Drop in well completion reports and have it build a summary.</p>
             </div>
             <div class="card">
                 <div class="card-icon" style="background: #E8E8F0;">&#9000;</div>
                 <h3>Claude Code</h3>
-                <p>Runs in the terminal and shows everything the AI is doing under the hood. This is what I use, but most people don't need this level of detail.</p>
+                <p>Runs in the terminal. Shows everything under the hood. What I use, but most people don't need it.</p>
             </div>
         </div>
 
@@ -1027,8 +1015,7 @@
             </button>
             <div class="expandable-content">
                 <div class="expandable-inner">
-                    <p>I just feel more comfortable without an application layer helping me. I don't want any of the user interface stuff; I want to see exactly what the computer is doing. Most people are not looking for that level of closeness to the code. The terminal is ugly, but for me it's no frills. It does exactly what it's supposed to do. I've tried five different coding environments and they all have some sort of bug or issue. The terminal just works.</p>
-                    <p>But for getting started and doing real work with your files, Co-Work is the right move. If you ever need to do something more technical (like set up data connections), Claude Code is there as a tool you can switch to.</p>
+                    <p>I just like seeing exactly what the computer is doing. The terminal is ugly, but it's no frills and it just works. I've tried five different coding environments and they all have bugs. For you, Co-Work is the right starting point. If you ever need something more technical, Claude Code is there.</p>
                 </div>
             </div>
         </div>
@@ -1038,7 +1025,7 @@
     <section id="layers" class="fade-in">
         <span class="section-label">How It Works</span>
         <h2>There Are Three Parts to This</h2>
-        <p>After doing this every day for months, I think it comes down to three things.</p>
+        <p>After doing this every day for a month, I think it comes down to three things.</p>
 
         <div class="layer-visual">
             <div class="layer-tab active" onclick="switchLayer(0)">
@@ -1061,22 +1048,19 @@
         <!-- Layer 1: Intent -->
         <div class="layer-content active" id="layer-0">
             <h3>Intent: What Do You Actually Want?</h3>
-            <p>Sounds simple. It's not. What you want is going to change as you use it. You'll ask for something, get it, and realize that's not quite what you meant. Then you refine. Then you refine again. You and the AI kind of co-evolve over time.</p>
-            <p>Sometimes you don't even know what you want until you try to explain it. That's normal.</p>
+            <p>Sounds simple. It's not. What you want changes as you use it. You ask for something, get it, realize that's not quite right, refine, and repeat. Sometimes you don't even know what you want until you try to explain it.</p>
 
             <div class="tip-box">
                 <span class="tip-label">How to get your intent out</span>
-                <p style="margin-bottom: 12px;"><strong>Talk, don't type.</strong> I use Wispr Flow ($15/month) for speech-to-text transcription. Last month I transcribed around 120,000 words. It's a bit clunky, but typing out everything you're thinking is way slower.</p>
-                <p style="margin-bottom: 12px;">Claude also has built-in transcription, and there are free open source options out there. The important thing is getting your thoughts out in bulk rather than one careful prompt at a time.</p>
-                <p style="margin-bottom: 0;"><strong>Brain dump while driving.</strong> Instead of doing one prompt at a time, waiting two minutes for each response, just get a huge amount of context and intent out at once. You drive a lot. That's a great time to talk through what you're working on.</p>
+                <p style="margin-bottom: 12px;"><strong>Talk, don't type.</strong> I use Wispr Flow ($15/month) for speech-to-text. Last month I transcribed around 120,000 words. Clunky, but way faster than typing everything out. Claude also has built-in transcription.</p>
+                <p style="margin-bottom: 0;"><strong>Brain dump while driving.</strong> Instead of one prompt at a time, just get a huge amount out at once. You drive a lot. That's your time.</p>
             </div>
         </div>
 
         <!-- Layer 2: Context -->
         <div class="layer-content" id="layer-1">
             <h3>Context: The Boring Part That Matters Most</h3>
-            <p>Intent is the interesting challenge. Context is just a grind. It's not emotionally draining or anything. It's just boring, and it takes forever. But it's probably the single most important thing you can do.</p>
-            <p>Context comes from two places: stuff on your computer and stuff in your head.</p>
+            <p>Context is just a grind. Boring, takes forever, but probably the most important thing you can do. It comes from two places: stuff on your computer and stuff in your head.</p>
 
             <div class="expandable">
                 <button class="expandable-toggle" onclick="toggleExpand(this)">
@@ -1101,9 +1085,8 @@
                 <div class="expandable-content">
                     <div class="expandable-inner">
                         <p>This is the harder part. You know a ton about your industry, your workflows, your preferences, and almost none of it is written down anywhere. Getting it out takes time. I'm still working on it months later.</p>
-                        <p>For your work, a lot of the relevant context is stuff these models just don't know. Completion processes, well specs, field terminology, how your team actually operates, the difference between different stages of finishing a well. None of that is in the training data. But if you write it up in a text file or a Word doc and drop it in your working folder, suddenly it can actually help you with industry-specific stuff instead of giving you generic answers.</p>
-                        <p>A lot of the useful information is in your head. You have to get it out. Whatever format works for you. I tend to use plain text documents.</p>
-                        <p><strong>This is also where brain dumps come in.</strong> When I'm driving, I talk into my notes app about whatever I'm working on, whatever's frustrating me, whatever I wish the AI understood better. You drive a lot. This is probably the most natural way for you to start getting context out.</p>
+                        <p>For your work, a lot of what matters is stuff these models just don't know. Completion processes, well specs, field terminology, how your team actually operates. If you write that up and drop it in your folder, it goes from generic answers to actually useful.</p>
+                        <p>I get my context out by brain dumping into the notes app while driving. You drive a lot. That's probably your best approach.</p>
                     </div>
                 </div>
             </div>
@@ -1139,8 +1122,7 @@
                 </button>
                 <div class="expandable-content">
                     <div class="expandable-inner">
-                        <p>I have a lot of information coming in through Apple Reminders, Apple Notes, email, and my calendar. Instead of manually checking each one and filing things away, I built a workflow called "Sync" that reads all of it, figures out where each item belongs, and asks me to approve or skip. Scroll through, click approve, click approve, skip, approve. Super fast.</p>
-                        <p>I also have a workflow called "Productive" that looks through my task list for items I've marked with a robot emoji (meaning "Claude should handle this"). It finds those tasks, does whatever I asked, and I just review the results. We're kind of going back and forth, co-working.</p>
+                        <p>I built a workflow called "Sync" that reads my Reminders, Notes, email, and calendar, figures out where each item belongs, and asks me to approve or skip. I also have one called "Productive" that looks for tasks I've flagged with a robot emoji (meaning "Claude should handle this") and just does them. I review the results.</p>
                     </div>
                 </div>
             </div>
@@ -1236,10 +1218,8 @@
             </button>
             <div class="expandable-content">
                 <div class="expandable-inner">
-                    <p>I need to pull financial data from multiple bank accounts, clean it up, and categorize every transaction. That process used to take hours of manual work: exporting CSVs, reformatting columns, matching and categorizing transactions.</p>
-                    <p>Claude turned the cleanup into a five-second process. I checked the numbers, and they're correct. The data cleanup is genuinely amazing.</p>
-                    <p>Then I asked it to do the analysis: reports, charts, insights from the clean data. That part fell apart. The charts were messed up, and the analysis was overly complicated. It just wasn't useful.</p>
-                    <p><strong>The takeaway:</strong> amazing at the structured, mechanical part. Still figuring out the creative and analytical side. This seems to be the broad pattern across all AI systems right now, whether it's Claude, ChatGPT, Codex, or anything else.</p>
+                    <p>I pull financial data from multiple bank accounts, clean it up, and categorize transactions. That used to take hours. Claude does the cleanup in five seconds. I checked the numbers; they're correct.</p>
+                    <p>Then I asked it to analyze the data: reports, charts, insights. That part fell apart. Charts were messed up, analysis was overly complicated. Amazing at the mechanical part, not there yet on the analytical side.</p>
                 </div>
             </div>
         </div>
@@ -1258,20 +1238,18 @@
         <div class="honest-grid">
             <div class="honest-card results">
                 <span class="honest-label">The Results</span>
-                <p>I have never been more on top of my stuff. Right now is supposed to be one of the busiest seasons of my life. We're moving to Florida. I'm job searching. Bar prep. Wedding planning. Finishing law school. Decluttering the house for the move.</p>
-                <p>And somehow I have six active job interviews (way more than I expected), updated to-do lists for every project, and a clean house where every room has its own task list we chip away at. I'm more prepared for my classes than I've been all year.</p>
+                <p>I have never been more on top of my stuff, and right now is supposed to be the busiest season of my life. Moving to Florida, job searching, bar prep, wedding planning, finishing law school. Somehow I have six active job interviews, updated to-do lists for every project, and a clean house.</p>
             </div>
 
             <div class="honest-card cost">
                 <span class="honest-label">The Cost</span>
-                <p>I'm paying about $134/month (that's the $125 Claude plan plus tax). Honestly, I'm considering switching to something cheaper. Last week I tried to max out my usage and only hit about 70%. I just don't need all this compute.</p>
-                <p>ChatGPT at $20/month might give me more value per dollar. I'm also looking at something called OpenClaw for personal assistant stuff. The switch will probably be a little painful, but I'll figure it out. For what it's worth, the tools are changing fast, and what's best right now might not be best in three months.</p>
+                <p>I'm paying about $134/month. Considering switching to something cheaper since I only hit about 70% usage even when I try. ChatGPT at $20/month might be more per dollar. The tools are changing fast; what's best now might not be best in three months.</p>
             </div>
 
             <div class="honest-card paradox">
                 <span class="honest-label">The Paradox</span>
                 <p>AI didn't automate my work away. It showed me how much more I could do. And because of that, I want to do even more.</p>
-                <p>Every free moment where I'm not dealing with the baby, I'm on my computer automating something or building something. It really engages me. It takes my attention in a way that's hard to explain.</p>
+                <p>Every free moment where I'm not dealing with the baby, I'm on my computer building something. It takes my attention in a way that's hard to explain.</p>
                 <div class="quote-block">
                     "Oh, what are you gonna do, go organize on your computer again?"<br>
                     <span style="font-style: normal; font-size: 0.9rem; color: var(--text-muted);">Macy's take on the situation. She's not wrong.</span>
@@ -1287,9 +1265,7 @@
             </button>
             <div class="expandable-content">
                 <div class="expandable-inner">
-                    <p>I saw somewhere that if you're using AI to amplify your work, that's one thing. If you're using it to fabricate something you believe or you feel, that's where you cross an ethical boundary. I think we're all still figuring this stuff out.</p>
-                    <p>For example, I've started a project to transcribe my relationship history with Macy, the different seasons we've been through. Not because I want the AI to write our wedding vows for me, but because I want it to help me organize my own thoughts and memories into something meaningful. It's not creating the feelings; it's leverage. I'm leveraging what I'm telling it to make something better than I could on my own.</p>
-                    <p>That line matters to me. I think it matters to figure out where it is for you, too.</p>
+                    <p>If you're using AI to amplify your work, that's one thing. If you're using it to fabricate something you believe or feel, that's different. I'm using it to organize my own thoughts, not to create them. That line matters to me.</p>
                 </div>
             </div>
         </div>
@@ -1299,7 +1275,7 @@
     <section id="start" class="fade-in">
         <span class="section-label">Getting Started</span>
         <h2>Where I'd Start If I Were You</h2>
-        <p>You don't need to do all of this at once. I've been at it for months and I'm still building. Here's what I'd do in your shoes.</p>
+        <p>You don't need to do all of this at once. I've been at it for about a month and I'm still building. Here's what I'd do in your shoes.</p>
 
         <div class="steps">
             <div class="step">
@@ -1386,7 +1362,7 @@
 </main>
 
 <footer>
-    <p>Put together by James. March 2026.</p>
+    <p>James talked, Claude built it. March 2026.</p>
 </footer>
 
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0})" aria-label="Back to top">&#8593;</button>
