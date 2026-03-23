@@ -883,6 +883,57 @@
             .card { padding: 20px; }
             .honest-card { padding: 24px; }
         }
+
+        /* ── TL;DR ── */
+        .tldr {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin: 32px auto 0;
+            max-width: 560px;
+        }
+
+        .tldr-label {
+            font-family: var(--font-sans);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .tldr ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tldr li {
+            padding: 7px 0;
+            padding-left: 16px;
+            font-size: 0.92rem;
+            color: var(--text-light);
+            position: relative;
+            line-height: 1.55;
+        }
+
+        .tldr li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .reading-time {
+            font-family: var(--font-sans);
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -891,7 +942,7 @@
 
 <nav>
     <div class="nav-inner">
-        <a href="#hero" class="nav-logo">AI Field Guide</a>
+        <a href="#hero" class="nav-logo">James's AI Notes</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#basics">The Basics</a></li>
             <li><a href="#layers">Three Layers</a></li>
@@ -921,21 +972,30 @@
     <!-- ════════ HERO ════════ -->
     <section id="hero">
         <h1>How I'm Actually Using AI</h1>
-        <p class="subtitle">From one friend to another. No hype, just what I've learned.</p>
+        <p class="subtitle">I told you I'd send this. Here's what I've figured out so far.</p>
         <p class="hero-intro">
-            I told you I'd send this over. Here's everything I've picked up after months of daily use: the stuff that's working, the stuff that's not, and where I'd start if I were you.
+            I've been using Claude every day for months. Some of it works really well, some of it doesn't. This is the whole picture, not a sales pitch.
         </p>
-        <div class="scroll-hint">
-            <span>Scroll to explore</span>
-            <div class="arrow"></div>
+        <p class="reading-time">About 10 minutes to read through everything</p>
+
+        <div class="tldr">
+            <span class="tldr-label">The short version</span>
+            <ul>
+                <li>Start with Claude Desktop's "Co-Work" mode. It reads your files and helps you work with them.</li>
+                <li>There are three parts to getting value: knowing what you want, giving it the right information, and tinkering until the workflow is right.</li>
+                <li>It's great at structured work (cleaning up spreadsheets, drafting emails). It's not great at analysis, charts, or anything subjective.</li>
+                <li>The most useful thing you can do is get the knowledge in your head into a document. Brain dump while you drive.</li>
+                <li>This is not a one-time setup. I've been at it for months and I'm still building.</li>
+                <li>I'm more on top of my stuff than I've ever been, but I'm also working more than ever. It's a trade-off.</li>
+            </ul>
         </div>
     </section>
 
     <!-- ════════ THE BASICS ════════ -->
     <section id="basics" class="fade-in">
-        <span class="section-label">Starting Point</span>
+        <span class="section-label">The Basics</span>
         <h2>Claude Desktop Has Three Modes</h2>
-        <p>When you open the app, you'll see three panes across the top. Each one does something different, and knowing which to use matters.</p>
+        <p>When you open the app, you'll see three panes across the top. Each one does something different.</p>
 
         <div class="card-grid three">
             <div class="card">
@@ -947,7 +1007,7 @@
                 <span class="badge">Start here</span>
                 <div class="card-icon" style="background: var(--accent-light);">&#128194;</div>
                 <h3>Co-Work</h3>
-                <p>Opens a folder on your computer and works with your actual files. Spreadsheets, Word docs, PDFs, whatever you have. This is the sweet spot.</p>
+                <p>Opens a folder on your computer and works with your actual files. Spreadsheets, Word docs, PDFs, whatever. You could drop in a bunch of well completion reports and have it build a summary, for example.</p>
             </div>
             <div class="card">
                 <div class="card-icon" style="background: #E8E8F0;">&#9000;</div>
@@ -957,7 +1017,7 @@
         </div>
 
         <div class="key-point">
-            Start with Co-Work. It gives you real power without the technical overhead. Think of it as a capable assistant sitting next to you, reading your files and helping you work.
+            Start with Co-Work. It works in a folder on your computer, reads your files, and helps you do stuff with them. That's really all there is to it at first.
         </div>
 
         <div class="expandable">
@@ -976,9 +1036,9 @@
 
     <!-- ════════ THREE LAYERS ════════ -->
     <section id="layers" class="fade-in">
-        <span class="section-label">The Framework</span>
-        <h2>Three Layers to Making This Useful</h2>
-        <p>After months of doing this every day, I think there are three things that determine whether AI is actually helpful or just a frustrating chat window.</p>
+        <span class="section-label">How It Works</span>
+        <h2>There Are Three Parts to This</h2>
+        <p>After doing this every day for months, I think it comes down to three things.</p>
 
         <div class="layer-visual">
             <div class="layer-tab active" onclick="switchLayer(0)">
@@ -1001,8 +1061,8 @@
         <!-- Layer 1: Intent -->
         <div class="layer-content active" id="layer-0">
             <h3>Intent: What Do You Actually Want?</h3>
-            <p>This sounds simple, but it's the hardest part. Your intent is going to change over time. You'll ask for something, get it, and realize that's not quite what you had in mind. Then you refine. And refine again. You and the AI are kind of co-evolving.</p>
-            <p>Sometimes you don't even know what you want until you try to explain it. That's normal. That's actually one of the more interesting parts of this whole process, figuring out what you're really after.</p>
+            <p>Sounds simple. It's not. What you want is going to change as you use it. You'll ask for something, get it, and realize that's not quite what you meant. Then you refine. Then you refine again. You and the AI kind of co-evolve over time.</p>
+            <p>Sometimes you don't even know what you want until you try to explain it. That's normal.</p>
 
             <div class="tip-box">
                 <span class="tip-label">How to get your intent out</span>
@@ -1014,8 +1074,8 @@
 
         <!-- Layer 2: Context -->
         <div class="layer-content" id="layer-1">
-            <h3>Context: The Boring, Crucial Part</h3>
-            <p>If intent is the interesting challenge, context is just a grind. It's not emotionally draining; it's not going to teach you about yourself. It's just boring, and it takes forever. But it might be the single most important thing you can do.</p>
+            <h3>Context: The Boring Part That Matters Most</h3>
+            <p>Intent is the interesting challenge. Context is just a grind. It's not emotionally draining or anything. It's just boring, and it takes forever. But it's probably the single most important thing you can do.</p>
             <p>Context comes from two places: stuff on your computer and stuff in your head.</p>
 
             <div class="expandable">
@@ -1025,10 +1085,10 @@
                 </button>
                 <div class="expandable-content">
                     <div class="expandable-inner">
-                        <p><strong>Start with files.</strong> Put spreadsheets, Word docs, CSVs, PDFs, whatever you have, into a folder. Point Co-Work at that folder. That's your foundation.</p>
-                        <p><strong>External data needs MCPs.</strong> If your data lives somewhere else (email, databases, bank accounts), you need what they call MCPs. Think of these as API connections between the AI and your services. I have MCPs set up for my email (both Outlook and Gmail), my bank accounts through SimpleFin ($1.50/month), Apple Reminders and Notes, my calendar, text messages, and my browser.</p>
-                        <p>Setting up MCPs can get technical fast. This is where Claude Code might come in, even if Co-Work is your main tool.</p>
-                        <p><strong>A real example:</strong> I used to manually export transactions from Bank of America, Chase, Fidelity, and Discover. It took about 30 minutes. Now SimpleFin pulls all of it in 3 seconds. $1.50/month. Totally worth it.</p>
+                        <p><strong>Start with files.</strong> Put spreadsheets, Word docs, CSVs, whatever into a folder. Point Co-Work at that folder. Done. For you, that could be daily field reports, production data, well completion logs, whatever you already have sitting on your computer.</p>
+                        <p><strong>External data needs MCPs.</strong> If your data lives somewhere else (email, databases, bank accounts), you need what they call MCPs. Think of these as API connections between the AI and your other services. I have MCPs for my email (both Outlook and Gmail), my bank accounts through SimpleFin ($1.50/month), Apple Reminders and Notes, my calendar, text messages, and my browser.</p>
+                        <p>Setting up MCPs can get technical. This is where Claude Code might come in, even if Co-Work is your main tool.</p>
+                        <p><strong>A real example:</strong> I used to manually export transactions from Bank of America, Chase, Fidelity, and Discover. It took about 30 minutes. Now SimpleFin pulls all of it in 3 seconds. $1.50/month.</p>
                     </div>
                 </div>
             </div>
@@ -1041,23 +1101,23 @@
                 <div class="expandable-content">
                     <div class="expandable-inner">
                         <p>This is the harder part. You know a ton about your industry, your workflows, your preferences, and almost none of it is written down anywhere. Getting it out takes time. I'm still working on it months later.</p>
-                        <p>For your work in oil and gas, a lot of the relevant context is industry knowledge that these models just don't have. Completion processes, well specs, field terminology, the way your team actually works. If you put that into a plain text file or a Word doc and drop it in your working folder, it makes a massive difference.</p>
-                        <p>A lot of the useful information is in your head, and you have to get that out if you want the AI to really work for you. Whatever format you feel most comfortable with. I tend to use just plain text documents.</p>
+                        <p>For your work, a lot of the relevant context is stuff these models just don't know. Completion processes, well specs, field terminology, how your team actually operates, the difference between different stages of finishing a well. None of that is in the training data. But if you write it up in a text file or a Word doc and drop it in your working folder, suddenly it can actually help you with industry-specific stuff instead of giving you generic answers.</p>
+                        <p>A lot of the useful information is in your head. You have to get it out. Whatever format works for you. I tend to use plain text documents.</p>
                         <p><strong>This is also where brain dumps come in.</strong> When I'm driving, I talk into my notes app about whatever I'm working on, whatever's frustrating me, whatever I wish the AI understood better. You drive a lot. This is probably the most natural way for you to start getting context out.</p>
                     </div>
                 </div>
             </div>
 
             <div class="key-point">
-                Context is the boring work that makes everything else possible. Get your files organized, get your data connected, and slowly get the knowledge in your head into a format the AI can use.
+                Context is just grunt work, but it's what makes everything else possible. Get your files in a folder, get your data connected if you can, and start getting the stuff in your head written down somewhere.
             </div>
         </div>
 
         <!-- Layer 3: Execution -->
         <div class="layer-content" id="layer-2">
-            <h3>Execution: Making It Actually Do the Thing</h3>
-            <p>You have your intent, you have your context, and now it's tinkering time. You're figuring out how to get the AI to do the actual work the way you want it done.</p>
-            <p>It can be tedious. You'll say "no, not like that" a bunch of times. But once you nail a repeatable workflow, the return on investment is huge.</p>
+            <h3>Execution: Getting It to Do What You Want</h3>
+            <p>You have your intent, you have your context, and now you're tinkering. You're figuring out how to get it to do the actual work the way you want it done.</p>
+            <p>It can be tedious. You'll say "no, not like that" a bunch of times. But once you nail a repeatable workflow, it pays for itself quickly.</p>
 
             <div class="expandable">
                 <button class="expandable-toggle" onclick="toggleExpand(this)">
@@ -1094,9 +1154,9 @@
 
     <!-- ════════ WHAT WORKS ════════ -->
     <section id="works" class="fade-in">
-        <span class="section-label">The Reality</span>
-        <h2>What It's Good At (and Where It Falls Apart)</h2>
-        <p>I'm not trying to sell you on this. Here's what I've actually found after using it every day.</p>
+        <span class="section-label">What Works</span>
+        <h2>What It Can and Can't Do</h2>
+        <p>Here's what I've actually found.</p>
 
         <div class="comparison">
             <div class="comparison-col works">
@@ -1185,22 +1245,21 @@
         </div>
 
         <div class="key-point">
-            These programs can basically do whatever you want if you explain yourself well enough and give them all the context. The bottleneck is usually you, not the AI. Getting your intent clear and your context organized is where the real work is.
+            The broad pattern: these programs can basically do whatever you want if you explain yourself well enough and give them all the context. The bottleneck is usually you, not the AI.
         </div>
     </section>
 
     <!-- ════════ THE HONEST TAKE ════════ -->
     <section id="honest" class="fade-in">
-        <span class="section-label">No Filter</span>
-        <h2>The Honest Take</h2>
-        <p>I told you I'd keep it real. Here's the full picture.</p>
+        <span class="section-label">The Full Picture</span>
+        <h2>What It's Actually Like</h2>
+        <p>Here's the part I don't think most people talk about.</p>
 
         <div class="honest-grid">
             <div class="honest-card results">
                 <span class="honest-label">The Results</span>
-                <p>I have never been more on top of my stuff. Right now is supposed to be one of the busiest, most hectic seasons of my life. We're moving to Florida. I'm job searching. I'm studying for the bar. We're planning a wedding. I'm finishing law school. I'm decluttering the entire house for the move. Arranging moving logistics.</p>
-                <p>And somehow I have six active job interviews (way more than I expected), updated to-do lists for every project, a house where every room has its own task list that we chip away at. I'm more prepared for classes and more active in them. The house is clean; daily upkeep is all that's left.</p>
-                <p>I'm more successful across the board than I've ever been. These are real results.</p>
+                <p>I have never been more on top of my stuff. Right now is supposed to be one of the busiest seasons of my life. We're moving to Florida. I'm job searching. Bar prep. Wedding planning. Finishing law school. Decluttering the house for the move.</p>
+                <p>And somehow I have six active job interviews (way more than I expected), updated to-do lists for every project, and a clean house where every room has its own task list we chip away at. I'm more prepared for my classes than I've been all year.</p>
             </div>
 
             <div class="honest-card cost">
@@ -1211,13 +1270,13 @@
 
             <div class="honest-card paradox">
                 <span class="honest-label">The Paradox</span>
-                <p>Here's the thing nobody tells you. AI didn't automate my work away. It showed me how much more I could do. And because of that, I want to do even more.</p>
+                <p>AI didn't automate my work away. It showed me how much more I could do. And because of that, I want to do even more.</p>
                 <p>Every free moment where I'm not dealing with the baby, I'm on my computer automating something or building something. It really engages me. It takes my attention in a way that's hard to explain.</p>
                 <div class="quote-block">
                     "Oh, what are you gonna do, go organize on your computer again?"<br>
                     <span style="font-style: normal; font-size: 0.9rem; color: var(--text-muted);">Macy's take on the situation. She's not wrong.</span>
                 </div>
-                <p>If you think AI will free up all your time, my experience says it gives you time and then fills it with new possibilities. The result is genuine productivity and real outcomes, but also a new kind of busy. And, honestly, it can feel a bit addictive in a way I wasn't expecting.</p>
+                <p>If you think AI will free up all your time, my experience is that it gives you time and then fills it with new possibilities. I'm genuinely more productive, but I'm also busier than I've ever been. It's a bit addictive, honestly.</p>
             </div>
         </div>
 
@@ -1238,37 +1297,37 @@
 
     <!-- ════════ GETTING STARTED ════════ -->
     <section id="start" class="fade-in">
-        <span class="section-label">Your Move</span>
+        <span class="section-label">Getting Started</span>
         <h2>Where I'd Start If I Were You</h2>
-        <p>You don't need to do everything at once. I've been at this for months and I'm still building my system. Here's a path that makes sense.</p>
+        <p>You don't need to do all of this at once. I've been at it for months and I'm still building. Here's what I'd do in your shoes.</p>
 
         <div class="steps">
             <div class="step">
                 <div class="step-num">1</div>
                 <div class="step-body">
                     <h3>Open Co-Work and point it at a folder</h3>
-                    <p>Pick a folder with some of your spreadsheets or documents. Doesn't need to be organized perfectly. Just give it something to work with.</p>
+                    <p>Pick a folder with some of your spreadsheets or documents. Production data, daily reports, cost sheets, whatever. Doesn't need to be organized. Just give it something to work with.</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-num">2</div>
                 <div class="step-body">
                     <h3>Start with something simple</h3>
-                    <p>Give it an Excel file and say "clean this up" or "here's all this data, make a summary spreadsheet." See what happens. Get a feel for what it can handle.</p>
+                    <p>Give it a spreadsheet and say "clean this up" or "make a summary of this data." You could hand it a messy well log and say "pull out the key completions data and put it in a clean table." See what happens.</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-num">3</div>
                 <div class="step-body">
                     <h3>Get your context out while you drive</h3>
-                    <p>Talk into your notes app about your work. What do you do every day? What data do you deal with? What's tedious? What do you wish someone would just handle for you? You'll be surprised how much useful context comes out once you start talking.</p>
+                    <p>Talk into your notes app about your work. What do you do every day? What data do you deal with? What's tedious? What do you wish someone else would just handle? You drive a lot. That's your time to do this.</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-num">4</div>
                 <div class="step-body">
                     <h3>Build from there</h3>
-                    <p>Once you see what it can do with your files, you'll start having ideas about what else you want to feed it. That's when MCPs and more advanced setups come in. You might want to connect your email, pull data from a database, or set up something specific to your workflow.</p>
+                    <p>Once you see what it can do with your files, you'll start having ideas. Maybe you want it to pull data from your email, or run a query against a database, or build a weekly summary from your daily field reports. That's when MCPs and more advanced setups come in.</p>
                 </div>
             </div>
             <div class="step">
